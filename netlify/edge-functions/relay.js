@@ -1,8 +1,6 @@
 export default async (request, context) => {
   const url = new URL(request.url);
-  // آی‌پی سرور و پورت 8080 که باز کردیم
-  const upstream = "46.249.102.151:8080"; 
-  
+  const upstream = "46.249.102.151:80"; // پورت ۸۰
   try {
     return await fetch(`http://${upstream}${url.pathname}${url.search}`, {
       method: request.method,
